@@ -14,7 +14,7 @@ from Client.callsmusic import client as USER
 async def broadcast(_, message: Message):
     sent = 0
     failed = 0
-    if message.from_user.id not in SUDOUSERS:
+    if message.from_user.id not in SUDO_USERS:
         return
     else:
         wtf = await message.reply("Starting a broadcast...")
